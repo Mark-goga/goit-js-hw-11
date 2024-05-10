@@ -1,6 +1,6 @@
-const divEl = document.querySelector('.card-container');
-export default function renderPhoto(arrayHits) {
-    divEl.innerHTML = '';
+export const divEl = document.querySelector('.card-container');
+export  function renderPhoto(arrayHits) {
+    // divEl.innerHTML = '';
     const markup = arrayHits.hits.reduce((value, hit) => {
         const { webformatURL, largeImageURL, tags, likes, views, comments, downloads } = hit;
         return value += `<div class="container-img">

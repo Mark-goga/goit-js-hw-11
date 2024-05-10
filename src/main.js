@@ -2,7 +2,7 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
-import renderPhoto from "./js/render-function";
+import { renderPhoto , divEl} from   "./js/render-function";
 import { fetchPhoto } from "./js/pixabay-api";
 
 
@@ -13,6 +13,7 @@ const loaderEl = document.querySelector('.loader');
 
 formEl.addEventListener('submit', (evn) => {
     evn.preventDefault();
+    divEl.innerHTML = "";
     loaderEl.classList.remove("is-hidden");
     const valueInput = inputEl.value.trim();
 

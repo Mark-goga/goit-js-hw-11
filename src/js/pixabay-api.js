@@ -16,7 +16,7 @@ export function fetchPhoto(valuePhoto) {
             return response.json();
         })
         .then(data => {
-            if (data.hits.length === 0) {
+            if (data.hits.length === 0 || valuePhoto === "") {
                 throw new Error("Sorry, there are no images matching your search query. Please try again!");
             }
             return data;
